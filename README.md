@@ -1,6 +1,8 @@
 # Get It Done App
 
-![Get It Done App](https://getitdone2day.netlify.app/)
+### 👇👇👇👇👇
+[https://getitdone2day.netlify.app/](https://getitdone2day.netlify.app/)
+### ☝️☝️☝️☝️☝️
 
 ## Overview
 
@@ -24,6 +26,7 @@ The **Get It Done App** is a sleek and user-friendly To-Do List application buil
 
 To get a local copy up and running, follow these steps:
 
-1. Clone the repo
+1. **Clone the repo**
    ```bash
    git clone https://github.com/NIKHILPNAIK/GetItDone.git
+
