@@ -1,6 +1,6 @@
 # Get It Done App
 
-![Get It Done App](https://via.placeholder.com/800x400.png?text=Get+It+Done+App)
+![Get It Done App](https://getitdone2day.netlify.app/)
 
 ## Overview
 
