@@ -1,0 +1,239 @@
+/* Global Styles */
+* {
+  font-family: "Playwrite GB S", cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#light {
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background-color 0.3s ease-in-out;
+  width: 100%;
+  height: 100vh;
+}
+
+#dark {
+  background: linear-gradient(135deg, #232526, #414345);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background-color 0.3s ease-in-out;
+  width: 100%;
+  height: 100vh;
+}
+
+.to-do-list {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+#dark .to-do-list {
+  background-color: rgba(50, 50, 50, 0.85); /* Darker background for dark mode */
+}
+
+.to-do-list h1 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  animation: slideDown 0.8s ease;
+}
+
+#dark .to-do-list h1 {
+  color: #fff; /* White text for dark mode */
+}
+
+/* Input field styling */
+.to-do-list input[type="text"] {
+  width: 75%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+  margin-bottom: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+#dark .to-do-list input[type="text"] {
+  background-color: #444;
+  color: #fff;
+  border-color: #666; /* Darker border in dark mode */
+}
+
+.to-do-list input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+}
+
+/* Add button styling */
+.add-button {
+  background: linear-gradient(135deg, #007bff, #6a11cb);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease-in-out;
+  margin-left: 10px;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+.add-button:hover {
+  background: linear-gradient(135deg, #6a11cb, #007bff);
+  transform: scale(1.05);
+}
+
+/* Task list styling */
+ol {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+ol li {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+#dark ol li {
+  background-color: #555; /* Darker background for list items in dark mode */
+  color: #fff;
+}
+
+ol li:hover {
+  background-color: #eef3f7;
+  transform: translateY(-3px);
+}
+
+#dark ol li:hover {
+  background-color: #666; /* Lighter hover effect in dark mode */
+}
+
+.text {
+  flex: 1;
+  text-align: left;
+  color: #333;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#dark .text {
+  color: #fff; /* White text in dark mode */
+}
+
+/* Button styles for delete, up, and down buttons */
+.delete-button, .move-button {
+  background: linear-gradient(135deg, #ff4d4d, #ff6f61);
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
+.delete-button:hover {
+  background: linear-gradient(135deg, #ff6f61, #ff4d4d);
+  transform: scale(1.05);
+}
+
+.move-button {
+  background: linear-gradient(135deg, #28a745, #8BC34A);
+}
+
+.move-button:hover {
+  background: linear-gradient(135deg, #8BC34A, #28a745);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Switch Position in the top-right corner */
+.switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 15px;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+#dark .switch {
+  background-color: rgba(50, 50, 50, 0.8); /* Darker switch background in dark mode */
+}
+
+.switch label {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #333;
+}
+
+#dark .switch label {
+  color: #fff; /* White text in dark mode */
+}
+
+.switch:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+#dark .switch:hover {
+  background-color: rgba(60, 60, 60, 1);
+}
